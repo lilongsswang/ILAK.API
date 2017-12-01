@@ -18,7 +18,7 @@ namespace ILAK.API.CodeGenerate.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
+    #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class Messages : MessagesBase
     {
@@ -31,7 +31,7 @@ namespace ILAK.API.CodeGenerate.Templates
             this.Write("  \r\nusing Newtonsoft.Json;\r\nusing System.Runtime.Serialization;\r\nnamespace TempRe" +
                     "stHostService\r\n{\r\n\t");
             
-            #line 11 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
+            #line 11 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
  
 	foreach (var item in MAgOptions.listAGOptions) { 
             
@@ -39,49 +39,49 @@ namespace ILAK.API.CodeGenerate.Templates
             #line hidden
             this.Write("    [DataContract]\r\n    public class ");
             
-            #line 14 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
+            #line 14 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture("Req" + item.AgCode));
             
             #line default
             #line hidden
             this.Write(": ParaBase\r\n    {\r\n\t    ");
             
-            #line 16 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
+            #line 16 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
  foreach(var pitem in item.Paras) {
             
             #line default
             #line hidden
             this.Write("        [JsonProperty(\"");
             
-            #line 17 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
+            #line 17 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(pitem.ParaName));
             
             #line default
             #line hidden
             this.Write("\")]\r\n        [DataMember]\r\n        public ");
             
-            #line 19 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
+            #line 19 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(pitem.DataType));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 19 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
+            #line 19 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(pitem.ParaName));
             
             #line default
             #line hidden
             this.Write(" { get; set; }\r\n\t\t");
             
-            #line 20 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
+            #line 20 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
 } 
             
             #line default
             #line hidden
             this.Write("    }\r\n\t");
             
-            #line 22 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
+            #line 22 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
  } 
             
             #line default
@@ -105,7 +105,7 @@ namespace ILAK.API.CodeGenerate.Templates
             }
         }
         
-        #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
+        #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Messages.tt"
 
 private global::ILAK.API.ListAGGroupOptions _MAgOptionsField;
 

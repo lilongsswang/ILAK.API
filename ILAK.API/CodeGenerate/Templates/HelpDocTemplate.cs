@@ -18,7 +18,7 @@ namespace ILAK.API.CodeGenerate.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
+    #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class HelpDocTemplate : HelpDocTemplateBase
     {
@@ -30,35 +30,35 @@ namespace ILAK.API.CodeGenerate.Templates
         {
             this.Write("  \r\n使用帮助\r\n请安装并开启服务后,参考地址如下。\r\n");
             
-            #line 9 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
+            #line 9 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
  foreach (var item in ProjOption.Interfaces) {
             
             #line default
             #line hidden
             this.Write("服务Service");
             
-            #line 10 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
+            #line 10 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
             #line hidden
             this.Write(":\r\nhttp://127.0.0.1:");
             
-            #line 11 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
+            #line 11 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ProjOption.ProjPort));
             
             #line default
             #line hidden
             this.Write("/Service");
             
-            #line 11 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
+            #line 11 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
             #line hidden
             this.Write("/help \r\n");
             
-            #line 12 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
+            #line 12 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
  } 
             
             #line default
@@ -67,7 +67,7 @@ namespace ILAK.API.CodeGenerate.Templates
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
+        #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\HelpDocTemplate.tt"
 
 private global::ILAK.API.ProjGenOptions _ProjOptionField;
 

@@ -18,7 +18,7 @@ namespace ILAK.API.CodeGenerate.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProgramTemplate.tt"
+    #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProgramTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class ProgramTemplate : ProgramTemplateBase
     {
@@ -43,7 +43,7 @@ namespace TempRestHostService
             {
                 new ProjService");
             
-            #line 20 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProgramTemplate.tt"
+            #line 20 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProgramTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ProjCode));
             
             #line default
@@ -53,7 +53,7 @@ namespace TempRestHostService
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProgramTemplate.tt"
+        #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProgramTemplate.tt"
 
 private string _ProjCodeField;
 

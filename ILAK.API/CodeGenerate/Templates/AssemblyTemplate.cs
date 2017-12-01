@@ -18,7 +18,7 @@ namespace ILAK.API.CodeGenerate.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AssemblyTemplate.tt"
+    #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AssemblyTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class AssemblyTemplate : AssemblyTemplateBase
     {
@@ -52,7 +52,7 @@ using System.Runtime.InteropServices;
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
 [assembly: Guid(""");
             
-            #line 29 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AssemblyTemplate.tt"
+            #line 29 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AssemblyTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GUIDString));
             
             #line default
@@ -75,7 +75,7 @@ using System.Runtime.InteropServices;
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AssemblyTemplate.tt"
+        #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AssemblyTemplate.tt"
 
 private string _GUIDStringField;
 

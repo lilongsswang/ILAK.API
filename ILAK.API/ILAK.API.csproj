@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E4BC4719-58A4-42A0-B24B-BCC45CF3FEFD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Hyd.API.JSONTbl</RootNamespace>
-    <AssemblyName>Hyd.API.ECB</AssemblyName>
+    <RootNamespace>ILAK.API</RootNamespace>
+    <AssemblyName>ILAK.API</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,7 +52,8 @@
     <myLibFolder>$(MSBuildProjectDirectory)\..\References</myLibFolder>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>hyd.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <!-- Tell the MSBuild T4 task to make the property available: -->
   <ItemGroup>
@@ -458,7 +459,6 @@
     <Content Include="Config\Sql\Project.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="hyd.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6">

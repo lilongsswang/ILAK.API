@@ -18,7 +18,7 @@ namespace ILAK.API.CodeGenerate.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectFileTemplate.tt"
+    #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectFileTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class ProjectFileTemplate : ProjectFileTemplateBase
     {
@@ -36,7 +36,7 @@ namespace ILAK.API.CodeGenerate.Templates
     <Platform Condition="" '$(Platform)' == '' "">AnyCPU</Platform>
     <ProjectGuid>{");
             
-            #line 14 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectFileTemplate.tt"
+            #line 14 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectFileTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GUIDString));
             
             #line default
@@ -66,7 +66,7 @@ namespace ILAK.API.CodeGenerate.Templates
     <Optimize>true</Optimize>
     <OutputPath>..\..\Deployments\Project");
             
-            #line 37 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectFileTemplate.tt"
+            #line 37 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectFileTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ProjCode));
             
             #line default
@@ -115,7 +115,7 @@ namespace ILAK.API.CodeGenerate.Templates
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectFileTemplate.tt"
+        #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectFileTemplate.tt"
 
 private string _GUIDStringField;
 

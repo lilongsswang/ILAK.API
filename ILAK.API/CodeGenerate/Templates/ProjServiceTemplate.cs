@@ -18,7 +18,7 @@ namespace ILAK.API.CodeGenerate.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+    #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class ProjServiceTemplate : ProjServiceTemplateBase
     {
@@ -32,98 +32,98 @@ namespace ILAK.API.CodeGenerate.Templates
                     "tHostService\r\n{\r\n    [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple" +
                     ")]\r\n    public partial class ProjService");
             
-            #line 14 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 14 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ProjCode));
             
             #line default
             #line hidden
             this.Write(" : ServiceBase\r\n    {\r\n        public ProjService");
             
-            #line 16 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 16 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ProjCode));
             
             #line default
             #line hidden
             this.Write("()\r\n        {\r\n            InitializeComponent();\r\n        }\r\n\t\t");
             
-            #line 20 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 20 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
  foreach (var item in ProjOption.Interfaces) { 
             
             #line default
             #line hidden
             this.Write("        private static ServiceHost servHost");
             
-            #line 21 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 21 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
             #line hidden
             this.Write(" = null;\r\n\t\t");
             
-            #line 22 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 22 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
  } 
             
             #line default
             #line hidden
             this.Write("        protected override void OnStart(string[] args)\r\n        {\r\n\t\t\t");
             
-            #line 25 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 25 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
  foreach (var item in ProjOption.Interfaces) { 
             
             #line default
             #line hidden
             this.Write("            servHost");
             
-            #line 26 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 26 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
             #line hidden
             this.Write(" = new ServiceHost(typeof(Service");
             
-            #line 26 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 26 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
             #line hidden
             this.Write("));\r\n            servHost");
             
-            #line 27 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 27 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
             #line hidden
             this.Write(".Open();\r\n\t\t\t");
             
-            #line 28 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 28 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
  } 
             
             #line default
             #line hidden
             this.Write("        }\r\n\r\n        protected override void OnStop()\r\n        {\r\n\t\t    ");
             
-            #line 33 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 33 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
  foreach (var item in ProjOption.Interfaces) { 
             
             #line default
             #line hidden
             this.Write("            if (servHost");
             
-            #line 34 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 34 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
             #line hidden
             this.Write(" != null) servHost");
             
-            #line 34 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 34 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
             #line hidden
             this.Write(".Close();\r\n\t\t\t");
             
-            #line 35 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+            #line 35 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
  } 
             
             #line default
@@ -132,7 +132,7 @@ namespace ILAK.API.CodeGenerate.Templates
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
+        #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceTemplate.tt"
 
 private string _ProjCodeField;
 

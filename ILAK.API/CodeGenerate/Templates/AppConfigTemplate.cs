@@ -18,7 +18,7 @@ namespace ILAK.API.CodeGenerate.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+    #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class AppConfigTemplate : AppConfigTemplateBase
     {
@@ -32,28 +32,28 @@ namespace ILAK.API.CodeGenerate.Templates
                     "<supportedRuntime version=\"v4.0\" sku=\".NETFramework,Version=v4.5\" />\r\n    </star" +
                     "tup>\r\n\t<connectionStrings>\r\n    <add name=\"connStr\" connectionString=\"");
             
-            #line 14 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+            #line 14 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(HYDAPIConnString));
             
             #line default
             #line hidden
             this.Write("\" />\r\n  </connectionStrings>\r\n  <system.serviceModel>\r\n    <services>\r\n\t");
             
-            #line 18 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+            #line 18 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
  foreach (var item in ProjOption.Interfaces) { 
             
             #line default
             #line hidden
             this.Write("      <service behaviorConfiguration=\"TempRestHostSerivce.SB");
             
-            #line 19 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+            #line 19 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
             #line hidden
             this.Write("\" name=\"TempRestHostService.Service");
             
-            #line 19 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+            #line 19 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
@@ -61,14 +61,14 @@ namespace ILAK.API.CodeGenerate.Templates
             this.Write("\">\r\n        <endpoint address=\"\" behaviorConfiguration=\"web\" binding=\"webHttpBind" +
                     "ing\"\r\n          name=\"interface");
             
-            #line 21 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+            #line 21 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
             #line hidden
             this.Write("\" bindingName=\"1\" \r\n        contract=\"TempRestHostService.Interface");
             
-            #line 22 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+            #line 22 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
@@ -77,35 +77,35 @@ namespace ILAK.API.CodeGenerate.Templates
                     "aExchange\" />\r\n        <host>\r\n          <baseAddresses>\r\n            <add baseA" +
                     "ddress=\"http://127.0.0.1:");
             
-            #line 26 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+            #line 26 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ProjOption.ProjPort));
             
             #line default
             #line hidden
             this.Write("/Service");
             
-            #line 26 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+            #line 26 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
             #line hidden
             this.Write("/\" />\r\n          </baseAddresses>\r\n        </host>\r\n      </service>\r\n\t");
             
-            #line 30 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+            #line 30 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
  } 
             
             #line default
             #line hidden
             this.Write("    </services>\r\n    <behaviors>\r\n      <serviceBehaviors>\r\n\t    ");
             
-            #line 34 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+            #line 34 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
  foreach (var item in ProjOption.Interfaces) { 
             
             #line default
             #line hidden
             this.Write("        <behavior name=\"TempRestHostSerivce.SB");
             
-            #line 35 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+            #line 35 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
@@ -113,7 +113,7 @@ namespace ILAK.API.CodeGenerate.Templates
             this.Write("\">\r\n          <serviceMetadata httpGetEnabled=\"True\" />\r\n          <serviceDebug " +
                     "includeExceptionDetailInFaults=\"False\" />\r\n        </behavior>\r\n\t\t");
             
-            #line 39 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+            #line 39 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
  } 
             
             #line default
@@ -141,7 +141,7 @@ namespace ILAK.API.CodeGenerate.Templates
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
+        #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\AppConfigTemplate.tt"
 
 private global::ILAK.API.ProjGenOptions _ProjOptionField;
 

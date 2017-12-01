@@ -1,2 +1,2 @@
 # ILAK.API
-INTERFACE
+可配置的接口管理程序

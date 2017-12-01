@@ -18,7 +18,7 @@ namespace ILAK.API.CodeGenerate.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
+    #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class SolutionTemplate : SolutionTemplateBase
     {
@@ -34,7 +34,7 @@ VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project(""{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"") = ""TempRestHostService"", ""TempRestHostService\TempRestHostService.csproj"", ""{");
             
-            #line 11 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
+            #line 11 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GUIDString));
             
             #line default
@@ -43,28 +43,28 @@ Project(""{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"") = ""TempRestHostService"", "
                     "ion\r\n\t\tDebug|Any CPU = Debug|Any CPU\r\n\t\tRelease|Any CPU = Release|Any CPU\r\n\tEndG" +
                     "lobalSection\r\n\tGlobalSection(ProjectConfigurationPlatforms) = postSolution\r\n\t\t{");
             
-            #line 19 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
+            #line 19 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GUIDString));
             
             #line default
             #line hidden
             this.Write("}.Debug|Any CPU.ActiveCfg = Debug|Any CPU\r\n\t\t{");
             
-            #line 20 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
+            #line 20 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GUIDString));
             
             #line default
             #line hidden
             this.Write("}.Debug|Any CPU.Build.0 = Debug|Any CPU\r\n\t\t{");
             
-            #line 21 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
+            #line 21 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GUIDString));
             
             #line default
             #line hidden
             this.Write("}.Release|Any CPU.ActiveCfg = Release|Any CPU\r\n\t\t{");
             
-            #line 22 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
+            #line 22 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GUIDString));
             
             #line default
@@ -75,7 +75,7 @@ Project(""{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"") = ""TempRestHostService"", "
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
+        #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\SolutionTemplate.tt"
 
 private string _GUIDStringField;
 

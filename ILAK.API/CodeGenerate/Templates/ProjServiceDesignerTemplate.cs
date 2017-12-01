@@ -18,7 +18,7 @@ namespace ILAK.API.CodeGenerate.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceDesignerTemplate.tt"
+    #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceDesignerTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class ProjServiceDesignerTemplate : ProjServiceDesignerTemplateBase
     {
@@ -30,7 +30,7 @@ namespace ILAK.API.CodeGenerate.Templates
         {
             this.Write("namespace TempRestHostService\r\n{\r\n    partial class ProjService");
             
-            #line 9 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceDesignerTemplate.tt"
+            #line 9 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceDesignerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ProjCode));
             
             #line default
@@ -66,7 +66,7 @@ namespace ILAK.API.CodeGenerate.Templates
             components = new System.ComponentModel.Container();
             this.ServiceName = ""Service");
             
-            #line 38 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceDesignerTemplate.tt"
+            #line 38 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceDesignerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ProjCode));
             
             #line default
@@ -75,7 +75,7 @@ namespace ILAK.API.CodeGenerate.Templates
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceDesignerTemplate.tt"
+        #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjServiceDesignerTemplate.tt"
 
 private string _ProjCodeField;
 

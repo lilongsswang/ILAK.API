@@ -18,7 +18,7 @@ namespace ILAK.API.CodeGenerate.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
+    #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class Interfaces : InterfacesBase
     {
@@ -31,7 +31,7 @@ namespace ILAK.API.CodeGenerate.Templates
             this.Write("  \r\nusing System.IO;\r\nusing System.ServiceModel;\r\nusing System.ServiceModel.Web;\r" +
                     "\nnamespace TempRestHostService\r\n{\r\n\t");
             
-            #line 12 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
+            #line 12 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
  
 	foreach (var item in IntfOptions.Interfaces) { 
             
@@ -40,14 +40,14 @@ namespace ILAK.API.CodeGenerate.Templates
             this.Write("\t[ServiceContract(Namespace = \"http://hsd.service.com/interface\")]\r\n    public in" +
                     "terface ");
             
-            #line 15 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
+            #line 15 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture("Interface" + item.IntfCode));
             
             #line default
             #line hidden
             this.Write("\r\n    {\r\n\t    ");
             
-            #line 17 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
+            #line 17 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
  foreach(var mitem in item.Methods) {
             
             #line default
@@ -56,28 +56,28 @@ namespace ILAK.API.CodeGenerate.Templates
                     " WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]\r\n        Stream " +
                     "");
             
-            #line 20 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
+            #line 20 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture("M"+mitem.MCode));
             
             #line default
             #line hidden
             this.Write("(");
             
-            #line 20 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
+            #line 20 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture("Req"+mitem.MAgOption.AgCode));
             
             #line default
             #line hidden
             this.Write(" inputData);\r\n\t\t");
             
-            #line 21 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
+            #line 21 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
 } 
             
             #line default
             #line hidden
             this.Write("    }\r\n\t");
             
-            #line 23 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
+            #line 23 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
  } 
             
             #line default
@@ -101,7 +101,7 @@ namespace ILAK.API.CodeGenerate.Templates
             }
         }
         
-        #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
+        #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Interfaces.tt"
 
 private global::ILAK.API.ListOfIntfGenOption _IntfOptionsField;
 

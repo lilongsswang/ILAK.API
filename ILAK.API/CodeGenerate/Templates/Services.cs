@@ -18,7 +18,7 @@ namespace ILAK.API.CodeGenerate.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
+    #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class Services : ServicesBase
     {
@@ -31,28 +31,28 @@ namespace ILAK.API.CodeGenerate.Templates
             this.Write("  \r\nusing System;\r\nusing System.IO;\r\nusing System.ServiceModel.Web;\r\nnamespace Te" +
                     "mpRestHostService\r\n{\r\n\t");
             
-            #line 12 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
+            #line 12 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
  foreach (var k in IntfOptions.Interfaces) {
             
             #line default
             #line hidden
             this.Write("    public class Service");
             
-            #line 13 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
+            #line 13 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(k.IntfCode));
             
             #line default
             #line hidden
             this.Write(" : Interface");
             
-            #line 13 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
+            #line 13 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(k.IntfCode));
             
             #line default
             #line hidden
             this.Write("\r\n    {\r\n\t");
             
-            #line 15 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
+            #line 15 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
  
 		foreach (var item in IntfOptions.Interfaces) { 
 			foreach(var mitem in item.Methods) {
@@ -61,14 +61,14 @@ namespace ILAK.API.CodeGenerate.Templates
             #line hidden
             this.Write("        public Stream M");
             
-            #line 18 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
+            #line 18 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(mitem.MCode));
             
             #line default
             #line hidden
             this.Write("(Req");
             
-            #line 18 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
+            #line 18 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(mitem.MAgOption.AgCode));
             
             #line default
@@ -85,21 +85,21 @@ namespace ILAK.API.CodeGenerate.Templates
             }
 			Controller");
             
-            #line 28 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
+            #line 28 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
             #line hidden
             this.Write(" control = new Controller");
             
-            #line 28 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
+            #line 28 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.IntfCode));
             
             #line default
             #line hidden
             this.Write("();\r\n            try\r\n            {\r\n\t\t\t\tret = control.Do");
             
-            #line 31 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
+            #line 31 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(mitem.MCode));
             
             #line default
@@ -124,7 +124,7 @@ namespace ILAK.API.CodeGenerate.Templates
 		}
 		");
             
-            #line 49 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
+            #line 49 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
 
 			}
 		} 
@@ -133,7 +133,7 @@ namespace ILAK.API.CodeGenerate.Templates
             #line hidden
             this.Write("    }\r\n\t");
             
-            #line 53 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
+            #line 53 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
  } 
             
             #line default
@@ -142,7 +142,7 @@ namespace ILAK.API.CodeGenerate.Templates
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
+        #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Services.tt"
 
 private global::ILAK.API.ListOfIntfGenOption _IntfOptionsField;
 

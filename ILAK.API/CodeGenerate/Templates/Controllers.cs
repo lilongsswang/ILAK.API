@@ -18,7 +18,7 @@ namespace ILAK.API.CodeGenerate.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
+    #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class Controllers : ControllersBase
     {
@@ -30,42 +30,42 @@ namespace ILAK.API.CodeGenerate.Templates
         {
             this.Write("  \r\nusing System.Collections.Generic;\r\nnamespace TempRestHostService\r\n{\r\n\t");
             
-            #line 10 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
+            #line 10 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
  foreach (var item in IntfOptions.Interfaces) { 
             
             #line default
             #line hidden
             this.Write("    public class ");
             
-            #line 11 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
+            #line 11 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture("Controller" + item.IntfCode));
             
             #line default
             #line hidden
             this.Write("\r\n    {\r\n\t    ");
             
-            #line 13 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
+            #line 13 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
  foreach(var mitem in item.Methods) {
             
             #line default
             #line hidden
             this.Write("        public RetBase<dynamic> ");
             
-            #line 14 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
+            #line 14 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture("Do" + mitem.MCode));
             
             #line default
             #line hidden
             this.Write("(");
             
-            #line 14 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
+            #line 14 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture("Req"+mitem.MAgOption.AgCode));
             
             #line default
             #line hidden
             this.Write(" ags)\r\n\t\t{\r\n\t\t    //数据库类型 代码生成处\r\n\t\t\t");
             
-            #line 17 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
+            #line 17 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
 
 			    string dbType = item.ConnOption.DbType;
 				string convertedDbType = "SqlSugar.DbType.SqlServer";
@@ -82,21 +82,21 @@ namespace ILAK.API.CodeGenerate.Templates
             #line hidden
             this.Write("            SqlSugar.DbType dbtype = ");
             
-            #line 28 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
+            #line 28 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(convertedDbType));
             
             #line default
             #line hidden
             this.Write(";\r\n            //连接字符串 代码生成处\r\n            string connStr = \"");
             
-            #line 30 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
+            #line 30 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.ConnOption.ConnString));
             
             #line default
             #line hidden
             this.Write("\";\r\n            //查询语句 - 带参数 代码生成处 MSqlStmt\r\n            string sqlstmt = @\"");
             
-            #line 32 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
+            #line 32 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(mitem.MSqlStmt));
             
             #line default
@@ -123,14 +123,14 @@ namespace ILAK.API.CodeGenerate.Templates
 		}
 		");
             
-            #line 52 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
+            #line 52 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
 } 
             
             #line default
             #line hidden
             this.Write("    }\r\n\t");
             
-            #line 54 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
+            #line 54 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
  } 
             
             #line default
@@ -139,7 +139,7 @@ namespace ILAK.API.CodeGenerate.Templates
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
+        #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\Controllers.tt"
 
 private global::ILAK.API.ListOfIntfGenOption _IntfOptionsField;
 

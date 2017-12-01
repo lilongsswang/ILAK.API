@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("Hyd.API.ECB")]
-[assembly: AssemblyDescription("云动快车")]
+[assembly: AssemblyTitle("ILAKAPI")]
+[assembly: AssemblyDescription("ILAKAPI")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("四川互宜达科技©2017")]
-[assembly: AssemblyProduct("Hyd.API.ECB")]
+[assembly: AssemblyCompany("ILAK@2017")]
+[assembly: AssemblyProduct("ILAKAPI")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
-[assembly: AssemblyTrademark("HYD")]
+[assembly: AssemblyTrademark("lilongss")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 会使此程序集中的类型

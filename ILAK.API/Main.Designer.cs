@@ -163,10 +163,9 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1039, 661);
             this.Controls.Add(this.tabShow);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1055, 700);
             this.Name = "Main";
-            this.Text = "云动快车_互宜达科技";
+            this.Text = "ILAKAPI";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabShow.ResumeLayout(false);
             this.ResumeLayout(false);

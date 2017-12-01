@@ -213,7 +213,6 @@ namespace ILAK.API
             this.Controls.Add(this.txtConnStrGen);
             this.Controls.Add(this.skinPanel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(620, 379);
             this.Name = "FrmRetVO";
             this.Text = "FrmMethod";

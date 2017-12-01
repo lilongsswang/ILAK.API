@@ -18,7 +18,7 @@ namespace ILAK.API.CodeGenerate.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectInstallerTemplate.tt"
+    #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectInstallerTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class ProjectInstallerTemplate : ProjectInstallerTemplateBase
     {
@@ -71,14 +71,14 @@ namespace ILAK.API.CodeGenerate.Templates
             // 
             this.serviceInstaller.DisplayName = ""Hyd_ProjService");
             
-            #line 48 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectInstallerTemplate.tt"
+            #line 48 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectInstallerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ProjCode));
             
             #line default
             #line hidden
             this.Write("\";\r\n            this.serviceInstaller.ServiceName = \"ProjService");
             
-            #line 49 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectInstallerTemplate.tt"
+            #line 49 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectInstallerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ProjCode));
             
             #line default
@@ -103,7 +103,7 @@ namespace ILAK.API.CodeGenerate.Templates
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 1 "E:\QQDownload\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectInstallerTemplate.tt"
+        #line 1 "E:\data\ILAK\ILAK.API\ILAK.API\CodeGenerate\Templates\ProjectInstallerTemplate.tt"
 
 private string _ProjCodeField;
 
