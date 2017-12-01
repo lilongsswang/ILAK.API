@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Sqls>
+    <Sql Name="InsertInterface">
+      Insert INTO [dbo].[HA_Interface]
+      (proj_code
+      ,intf_code
+      ,intf_name
+      ,intf_namespace
+      ,intf_version
+      ,intf_auth
+      ,intf_dbconn
+      ,intf_note
+      ) VALUES
+      ('#proj_code#'
+      ,'#intf_code#'
+      ,'#intf_name#'
+      ,'#intf_namespace#'
+      ,'#intf_version#'
+      ,'#intf_auth#'
+      ,'#intf_dbconn#'
+      ,'#intf_note#'
+      )
+    </Sql>
+    <Sql Name="ModifyInterface">
+      Update [dbo].[HA_Interface]
+      set '#SET_Section#'
+      FROM [dbo].[HA_Interface] where [intf_code] = '#intf_code#'
+    </Sql>
+    <Sql Name="CountIntfNumbers">
+      select count(intf_code) TotalCount from [dbo].[HA_Interface] where [proj_code] = '#proj_code#'
+    </Sql>
+    <Sql Name="GetSimpleConns">
+      select conn_id 'Index',conn_name 'ConnName' from dbo.HA_Connection
+    </Sql>
+  </Sqls>
+</Root>

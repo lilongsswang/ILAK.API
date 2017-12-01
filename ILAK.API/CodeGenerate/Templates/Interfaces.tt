@@ -1,0 +1,24 @@
+﻿<#@ template language="C#" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ parameter type="ILAK.API.ListOfIntfGenOption" name="IntfOptions" #>  
+using System.IO;
+using System.ServiceModel;
+using System.ServiceModel.Web;
+namespace TempRestHostService
+{
+	<# 
+	foreach (var item in IntfOptions.Interfaces) { #>
+	[ServiceContract(Namespace = "http://hsd.service.com/interface")]
+    public interface <#= "Interface" + item.IntfCode #>
+    {
+	    <# foreach(var mitem in item.Methods) {#>
+        [OperationContract]
+        [WebInvoke(Method = "POST", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        Stream <#= "M"+mitem.MCode #>(<#= "Req"+mitem.MAgOption.AgCode #> inputData);
+		<#} #>
+    }
+	<# } #>
+}

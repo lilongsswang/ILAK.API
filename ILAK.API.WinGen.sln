@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILAK.API", "ILAK.API\ILAK.API.csproj", "{E4BC4719-58A4-42A0-B24B-BCC45CF3FEFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILAK.API.JsonClassGenLib", "ILAK.API.JsonClassGenLib\ILAK.API.JsonClassGenLib.csproj", "{A839B0AF-FBA0-49F2-A7EB-8AC3054748F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILAK.API.Service", "ILAK.API.Service\ILAK.API.Service.csproj", "{7296CE04-C31A-403A-91DE-5D6A206CCC11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILAK.API.RemoteAccess", "ILAK.API.RemoteAccess\ILAK.API.RemoteAccess.csproj", "{E994182C-FE96-42E0-87E7-1D7F6913C938}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4BC4719-58A4-42A0-B24B-BCC45CF3FEFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4BC4719-58A4-42A0-B24B-BCC45CF3FEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4BC4719-58A4-42A0-B24B-BCC45CF3FEFD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E4BC4719-58A4-42A0-B24B-BCC45CF3FEFD}.Debug|x86.Build.0 = Debug|Any CPU
+		{E4BC4719-58A4-42A0-B24B-BCC45CF3FEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4BC4719-58A4-42A0-B24B-BCC45CF3FEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4BC4719-58A4-42A0-B24B-BCC45CF3FEFD}.Release|x86.ActiveCfg = Release|Any CPU
+		{E4BC4719-58A4-42A0-B24B-BCC45CF3FEFD}.Release|x86.Build.0 = Release|Any CPU
+		{A839B0AF-FBA0-49F2-A7EB-8AC3054748F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A839B0AF-FBA0-49F2-A7EB-8AC3054748F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A839B0AF-FBA0-49F2-A7EB-8AC3054748F9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A839B0AF-FBA0-49F2-A7EB-8AC3054748F9}.Debug|x86.Build.0 = Debug|Any CPU
+		{A839B0AF-FBA0-49F2-A7EB-8AC3054748F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A839B0AF-FBA0-49F2-A7EB-8AC3054748F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A839B0AF-FBA0-49F2-A7EB-8AC3054748F9}.Release|x86.ActiveCfg = Release|Any CPU
+		{A839B0AF-FBA0-49F2-A7EB-8AC3054748F9}.Release|x86.Build.0 = Release|Any CPU
+		{7296CE04-C31A-403A-91DE-5D6A206CCC11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7296CE04-C31A-403A-91DE-5D6A206CCC11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7296CE04-C31A-403A-91DE-5D6A206CCC11}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7296CE04-C31A-403A-91DE-5D6A206CCC11}.Debug|x86.Build.0 = Debug|Any CPU
+		{7296CE04-C31A-403A-91DE-5D6A206CCC11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7296CE04-C31A-403A-91DE-5D6A206CCC11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7296CE04-C31A-403A-91DE-5D6A206CCC11}.Release|x86.ActiveCfg = Release|Any CPU
+		{7296CE04-C31A-403A-91DE-5D6A206CCC11}.Release|x86.Build.0 = Release|Any CPU
+		{E994182C-FE96-42E0-87E7-1D7F6913C938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E994182C-FE96-42E0-87E7-1D7F6913C938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E994182C-FE96-42E0-87E7-1D7F6913C938}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E994182C-FE96-42E0-87E7-1D7F6913C938}.Debug|x86.Build.0 = Debug|Any CPU
+		{E994182C-FE96-42E0-87E7-1D7F6913C938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E994182C-FE96-42E0-87E7-1D7F6913C938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E994182C-FE96-42E0-87E7-1D7F6913C938}.Release|x86.ActiveCfg = Release|Any CPU
+		{E994182C-FE96-42E0-87E7-1D7F6913C938}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

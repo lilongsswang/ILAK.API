@@ -1,0 +1,59 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ parameter type="ILAK.API.ProjGenOptions" name="ProjOption" #>
+<#@ parameter type="System.string" name="HYDAPIConnString" #>
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+    </startup>
+	<connectionStrings>
+    <add name="connStr" connectionString="<#= HYDAPIConnString #>" />
+  </connectionStrings>
+  <system.serviceModel>
+    <services>
+	<# foreach (var item in ProjOption.Interfaces) { #>
+      <service behaviorConfiguration="TempRestHostSerivce.SB<#= item.IntfCode #>" name="TempRestHostService.Service<#= item.IntfCode #>">
+        <endpoint address="" behaviorConfiguration="web" binding="webHttpBinding"
+          name="interface<#= item.IntfCode #>" bindingName="1" 
+        contract="TempRestHostService.Interface<#= item.IntfCode #>" />
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://127.0.0.1:<#= ProjOption.ProjPort #>/Service<#= item.IntfCode #>/" />
+          </baseAddresses>
+        </host>
+      </service>
+	<# } #>
+    </services>
+    <behaviors>
+      <serviceBehaviors>
+	    <# foreach (var item in ProjOption.Interfaces) { #>
+        <behavior name="TempRestHostSerivce.SB<#= item.IntfCode #>">
+          <serviceMetadata httpGetEnabled="True" />
+          <serviceDebug includeExceptionDetailInFaults="False" />
+        </behavior>
+		<# } #>
+      </serviceBehaviors>
+      <endpointBehaviors>
+        <behavior name="web">
+          <!--部署前改为 false-->
+          <webHttp helpEnabled="true" />
+        </behavior>
+        <behavior name="wcf">
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+  </system.serviceModel>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-10.0.0.0" newVersion="10.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>

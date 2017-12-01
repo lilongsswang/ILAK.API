@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Sqls>
+    <Sql Name="GetMethodFull">
+      SELECT 	a.*,	b.*,	c.*
+      FROM dbo.HA_Method a
+      left join dbo.HA_Interface b on a.intf_code = b.intf_code
+      left join dbo.HA_Project c on b.proj_code = c.proj_code;
+    </Sql>
+    <Sql Name="CountMethodNumbers">
+      select count(m_code) TotalCount from [dbo].[HA_Method] where [intf_code] = '#intf_code#'
+    </Sql>
+    <Sql Name="GetInterfacesSimple">
+      SELECT
+      a.[intf_code] '接口代码'
+      ,a.[intf_name] '接口名称'
+      ,b.[proj_name]  '项目名称'
+      FROM [dbo].[HA_Interface] a
+      left join [dbo].[HA_Project] b on a.proj_code=b.proj_code
+    </Sql>
+    <Sql Name="GetInterfaceSimple">
+      SELECT
+      a.[intf_code] '接口代码'
+      ,a.[intf_name] '接口名称'
+      ,b.[proj_name]  '项目名称'
+      FROM [dbo].[HA_Interface] a
+      left join [dbo].[HA_Project] b on a.proj_code=b.proj_code where a.proj_code='#proj_code#'
+    </Sql>
+    <Sql Name="GetProjectsSimple">
+      SELECT  [proj_code] '项目代码',[proj_name] as '项目名称' FROM [dbo].[HA_Project]
+    </Sql>
+    <Sql Name="GetSimpleAGs">
+      select ag_code 'Index', ag_name 'Name' from dbo.HA_ArgGroup
+    </Sql>
+    <Sql Name="GetSimpleRetVOs">
+      select rv_name 'Name' from dbo.HA_RetValObject
+    </Sql>
+    <Sql Name="GetInterface2">
+      SELECT [intf_name]
+      ,[intf_code]
+      ,[intf_dbconn]
+      FROM [dbo].[HA_Interface]
+      where intf_code='#intf_code#'
+    </Sql>
+    <Sql Name="GetConnection2">
+      SELECT [conn_name]
+      ,[conn_string]
+      ,[conn_dbtype]
+      FROM [dbo].[HA_Connection]
+      where conn_name='#conn_name#'
+    </Sql>
+    <Sql Name="GetParas2">
+      SELECT
+      a.para_name,
+      a.para_default,
+      a.para_datatype
+      FROM [dbo].[HA_Parameter] a left join [dbo].[HA_ArgGroup] b on
+      a.para_code
+      in (select col from dbo.split((select i.ag_paras from [dbo].[HA_ArgGroup] i where i.ag_code='#ag_code#')+',' ,','))
+      where b.ag_code='#ag_code#'
+    </Sql>
+    <Sql Name="GetRetVO2">
+      SELECT [rv_name]
+      ,[rv_exttype]
+      ,[rv_note]
+      FROM [dbo].[HA_RetValObject] where rv_name='#rv_name#'
+    </Sql>
+  </Sqls>
+</Root>

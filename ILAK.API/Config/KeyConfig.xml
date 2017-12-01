@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Settings>
+    <Item Name="HDSAPISQL" Value="HDSAPISQL"/>
+    <Item Name="HDSCache" Value="HDSCache"/>
+  </Settings>
+</Root>

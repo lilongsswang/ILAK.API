@@ -1,0 +1,54 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ parameter type="ILAK.API.ListOfIntfGenOption" name="IntfOptions" #>  
+using System;
+using System.IO;
+using System.ServiceModel.Web;
+namespace TempRestHostService
+{
+	<# foreach (var k in IntfOptions.Interfaces) {#>
+    public class Service<#= k.IntfCode #> : Interface<#= k.IntfCode #>
+    {
+	<# 
+		foreach (var item in IntfOptions.Interfaces) { 
+			foreach(var mitem in item.Methods) {#>
+        public Stream M<#= mitem.MCode #>(Req<#= mitem.MAgOption.AgCode #> input)
+		{
+			WebOperationContext.Current.OutgoingResponse.ContentType = Messages.RESTFUL_OUTPUT_CONTENTTYPE;
+			RetBase<dynamic> ret = new RetBase<dynamic>();
+			if (input == null)
+            {
+                ret.code = "-1";
+                ret.msg = Messages.PARAM_NOT_ALLOW_EMPTY;
+                return ret.ToStream();
+            }
+			Controller<#= item.IntfCode #> control = new Controller<#= item.IntfCode #>();
+            try
+            {
+				ret = control.Do<#= mitem.MCode #>(input);
+                ret.code = "1";
+                ret.msg = "成功";
+            }
+            catch (BusinessException bex)
+            {
+                ret.code = "-1";
+                ret.msg = bex.Message;
+                return ret.ToStream();
+            }
+            catch (Exception unkown)
+            {
+                ret.code = "-2";
+                ret.msg = unkown.Message;
+                return ret.ToStream();
+            }
+            return ret.ToStream();
+		}
+		<#
+			}
+		} #>
+    }
+	<# } #>
+}

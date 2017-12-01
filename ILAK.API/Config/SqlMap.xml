@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root> 
+  <DbConfig>
+    <Db Name="HDSAPISQL" Type="SqlServer" ConnectionString="Server=172.18.107.250;Database=HDSAPI;User Id=sa;Password=Passw0rd;" Dll=""
+      ConnectionType="System.Data.SqlClient.SqlConnection"
+      CommandType="System.Data.SqlClient.SqlCommand"
+      AdapterType="System.Data.SqlClient.SqlDataAdapter"/>
+    <Db Name="HDSCache" Type="Cache" ConnectionString="Server=172.18.107.162;Port=1972;Namespace=HDS;User Id=_system;Password=SYS;"
+      Dll="InterSystems.Data.CacheClient.dll"
+      ConnectionType="InterSystems.Data.CacheClient.CacheConnection"
+      CommandType="InterSystems.Data.CacheClient.CacheCommand"
+      AdapterType="InterSystems.Data.CacheClient.CacheDataAdapter"/>
+  </DbConfig>
+  <SqlFiles>
+    <File Name="Sql\APISystem.xml"/>
+    <File Name="Sql\Project.xml"/>
+    <File Name="Sql\Interface.xml"/>
+    <File Name="Sql\Method.xml"/>
+    <File Name="Sql\Parameter.xml"/>
+    <File Name="Sql\RetValObj.xml"/>
+  </SqlFiles>
+</Root>

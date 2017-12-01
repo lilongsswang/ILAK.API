@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Sqls>
+    <Sql Name="InsertProject">
+      INSERT INTO [dbo].[HA_Project]
+      ([proj_name]
+      ,[proj_code]
+      ,[proj_note]
+      ,[proj_port])
+      VALUES
+      ('#proj_name#'
+      ,'#proj_code#'
+      ,'#proj_note#','#proj_port#')
+    </Sql>
+    <Sql Name="UpdateProject">
+      Update [dbo].[HA_Project]
+      set [proj_name]='#proj_name#'
+      ,[proj_note]='#proj_note#'
+      ,[proj_port]='#proj_port#'
+      where proj_code='#proj_code#'
+    </Sql>
+  </Sqls>
+</Root>

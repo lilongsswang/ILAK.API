@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Sqls>  
+    <!--获取系统初始化数据-->
+    <Sql Name="GetProjects">
+      SELECT  [proj_code] '项目代码'
+      ,[proj_name] as '项目名称'
+      ,[proj_port] as '部署端口'
+      ,[proj_note] as '备注'
+      FROM [dbo].[HA_Project]
+    </Sql>
+    <Sql Name="GetProject">
+      SELECT  [proj_code]
+      ,[proj_name]
+      ,[proj_port]
+      FROM [dbo].[HA_Project] where proj_code='#proj_code#'
+    </Sql>
+    <Sql Name="GetInterfaces">
+      SELECT top 50
+      b.[proj_name]  '项目名称'
+      ,a.[proj_code] '项目代码'
+      ,a.[intf_name] '接口名称'
+      ,a.[intf_code] '接口代码'
+      ,a.[intf_namespace] '命名空间'
+      ,a.[intf_version] '接口版本'
+      ,a.[intf_auth] '接口作者'
+      ,a.[intf_dbconn] '数据库连接'
+      ,a.[intf_note] '备注'
+      FROM [dbo].[HA_Interface] a
+      left join [dbo].[HA_Project] b on a.proj_code=b.proj_code
+    </Sql>
+    <Sql Name="GetInterface">
+      SELECT
+      b.[proj_name]  '项目名称'
+      ,a.[proj_code] '项目代码'
+      ,a.[intf_name] '接口名称'
+      ,a.[intf_code] '接口代码'
+      ,a.[intf_namespace] '命名空间'
+      ,a.[intf_version] '接口版本'
+      ,a.[intf_auth] '接口作者'
+      ,a.[intf_dbconn] '数据库连接'
+      ,a.[intf_note] '备注'
+      FROM [dbo].[HA_Interface] a
+      left join [dbo].[HA_Project] b on a.proj_code=b.proj_code where a.proj_code='#proj_code#'
+    </Sql>
+    <Sql Name="GetInterfaceGen">
+      SELECT
+      b.[proj_name]
+      ,a.[proj_code]
+      ,a.[intf_name]
+      ,a.[intf_code]
+      ,a.[intf_namespace]
+      ,a.[intf_version]
+      ,a.[intf_auth]
+      ,a.[intf_dbconn]
+      FROM [dbo].[HA_Interface] a
+      left join [dbo].[HA_Project] b on a.proj_code=b.proj_code where a.proj_code='#proj_code#'
+    </Sql>
+    <Sql Name="GetConnections">
+      SELECT
+      [conn_id] '序号'
+      ,[conn_name] '连接名称'
+      ,[conn_IP] '服务器IP'
+      ,[conn_Account] '账号'
+      ,[conn_Password] '密码'
+      ,[conn_DBType] '数据库类型'
+      ,[conn_Alias] 'DB名称'
+      ,[conn_CType] '连接类型'
+      ,[conn_String] '连接字符串'
+      ,[conn_note] '备注'
+      FROM [dbo].[HA_Connection]
+    </Sql>
+    <Sql Name="GetInterfaceUsedConnectionsNumber">
+      select count(*) 
+      from dbo.ha_interface where intf_dbconn ='#conn_name#'
+    </Sql>
+    <Sql Name="GetConnection">
+      SELECT
+      [conn_name]
+      ,[conn_IP]
+      ,[conn_Account]
+      ,[conn_Password]
+      ,[conn_DBType]
+      ,[conn_Alias]
+      ,[conn_CType]
+      ,[conn_String]
+      FROM [dbo].[HA_Connection] where conn_name='#conn_name#'
+    </Sql>
+    <Sql Name="GetMethods">
+      SELECT
+      [intf_code] '接口代码'
+      ,[m_name] '方法名称'
+      ,[m_code] '方法编号'
+      ,[m_desc] '描述'
+      --,[m_reqtype] '请求类型'
+      ,[m_template] '模版类型(枚举)'
+      ,[m_version] '方法版本'
+      ,[m_funcode] '代码(SQL)'
+      ,[m_isencrypted] '返回内容是否加密'
+      ,[m_arggrpcode] 'agcode'
+      ,[m_rtnvaluecode] 'rtnvalcode'
+      ,[m_pagesize] '分页大小'
+      FROM [dbo].[HA_Method]
+    </Sql>
+    <Sql Name="GetMethod">
+      SELECT
+      [intf_code] '接口代码'
+      ,[m_name] '方法名称'
+      ,[m_code] '方法编号'
+      ,[m_desc] '描述'
+      --,[m_reqtype] '请求类型'
+      ,[m_template] '模版类型(枚举)'
+      ,[m_version] '方法版本'
+      ,[m_funcode] '代码(SQL)'
+      ,[m_isencrypted] '返回内容是否加密'
+      ,[m_arggrpcode] 'agcode'
+      ,[m_rtnvaluecode] 'rtnvalcode'
+      ,[m_pagesize] '分页大小'
+      FROM [dbo].[HA_Method] where [intf_code] = '#intf_code#'
+    </Sql>
+    <Sql Name="GetMethodGen">
+      SELECT
+      [intf_code]
+      ,[m_name]
+      ,[m_code]
+      ,[m_desc]
+      ,[m_reqtype]
+      ,[m_template]
+      ,[m_version]
+      ,[m_funcode]
+      ,[m_isencrypted]
+      ,[m_arggrpcode]
+      ,[m_rtnvaluecode]
+      ,[m_pagesize]
+      FROM [dbo].[HA_Method] where [intf_code] = '#intf_code#'
+    </Sql>
+    <Sql Name="GetAGs">
+      SELECT
+      [ag_code] '代码'
+      ,[ag_name] '组名'
+      ,[ag_paras] '所有参数的代码 逗号分隔'
+      ,[ag_note] '备注'
+      FROM [dbo].[HA_ArgGroup]
+    </Sql>
+    <Sql Name="GetAG">
+      SELECT
+      [ag_code]
+      ,[ag_name] 
+      ,[ag_paras] 
+      FROM [dbo].[HA_ArgGroup] where ag_code = '#ag_code#'
+    </Sql>
+    <Sql Name="GetParas">
+      SELECT
+      [para_code] '代码'
+      ,[para_name] '名称'
+      ,[para_datatype] '数据类型'
+      ,[para_length] '最大长度'
+      ,[para_default] '默认值(用于测试方法)'
+      ,[para_note] '备注'
+      FROM [dbo].[HA_Parameter]
+    </Sql>
+    <Sql Name="GetParasWithAgCode">
+      SELECT
+      [para_code] '代码'
+      ,[para_name] '名称'
+      ,[para_datatype] '数据类型'
+      ,[para_length] '最大长度'
+      ,[para_default] '默认值(用于测试方法)'
+      ,[para_note] '备注'
+      FROM [dbo].[HA_Parameter] a left join [dbo].[HA_ArgGroup] b on
+      a.para_code
+      in (select col from dbo.split((select i.ag_paras from [dbo].[HA_ArgGroup] i where i.ag_code='#ag_code#')+',' ,','))
+      where b.ag_code='#ag_code#'
+    </Sql>
+    <Sql Name="GetParasWithAgCodeGen">
+      SELECT
+      [para_code]
+      ,[para_name]
+      ,[para_datatype]
+      ,[para_length]
+      ,[para_default]
+      FROM [dbo].[HA_Parameter] a left join [dbo].[HA_ArgGroup] b on
+      a.para_code
+      in (select col from dbo.split((select i.ag_paras from [dbo].[HA_ArgGroup] i where i.ag_code='#ag_code#')+',' ,','))
+      where b.ag_code='#ag_code#'
+    </Sql>
+    <Sql Name="CountParaNumbers1"> <!--可能没用处-->
+      SELECT
+      count([para_code]) totalnum
+      FROM [dbo].[HA_Parameter] a left join [dbo].[HA_ArgGroup] b on
+      a.para_code
+      in (select col from dbo.split((select i.ag_paras from [dbo].[HA_ArgGroup] i where i.ag_code='#ag_code#')+',' ,','))
+      where b.ag_code='#ag_code#'
+      group by b.ag_code
+    </Sql>
+    <Sql Name="CountParaNumbers">
+      SELECT
+      count(a.para_code) '用到这个参数的参数组个数'
+      FROM [dbo].[HA_ArgGroup] b left join [dbo].[HA_Parameter] a on
+      a.para_code
+      in (select col from dbo.split((select i.ag_paras from [dbo].[HA_ArgGroup] i where i.ag_code='#ag_code#')+',' ,','))
+      where b.ag_code='#ag_code#'
+      where a.para_code='#para_code#'
+    </Sql>
+    <Sql Name="GetRetVOs">
+      SELECT [rv_name] '类名称'
+      ,[rv_JSON] 'JSON串(类定义)'
+      ,[rv_exttype] '继承类型'
+      ,[rv_note] '备注'
+      FROM [dbo].[HA_RetValObject]
+    </Sql>
+    <Sql Name="GetMethodUsedRetVOsNumber">
+      select count(*) from dbo.ha_method where m_rtnvaluecode = '#rv_name#'
+    </Sql>
+    <Sql Name="CountAGNumbers">
+      select count(*) from dbo.ha_method where m_arggrpcode = '#ag_code#'
+    </Sql>
+  </Sqls>
+</Root> 

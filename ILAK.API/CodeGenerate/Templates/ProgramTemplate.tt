@@ -1,0 +1,25 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ parameter name="ProjCode" type="System.string" #>
+using System.ServiceProcess;
+namespace TempRestHostService
+{
+    static class Program
+    {
+        /// <summary>
+        /// 应用程序的主入口点。
+        /// </summary>
+        static void Main()
+        {
+            ServiceBase[] ServicesToRun;
+            ServicesToRun = new ServiceBase[]
+            {
+                new ProjService<#= ProjCode #>()
+            };
+            ServiceBase.Run(ServicesToRun);
+        }
+    }
+}
